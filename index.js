@@ -44,9 +44,14 @@ let loggerTouse = (req, res, next) => {
   next();
 };
 
-app.use(loggerTouse);
-app.use("/admin", admin);
-app.use("/user", user);
+
+
+app.get("/",(req,res)=>{
+  res.json("Welcome to Backend Side Chat-Point");
+})
+//app.use(loggerTouse);
+app.use("/admin",loggerTouse, admin);
+app.use("/user",loggerTouse, user);
 // const {admin} = require("./routes/admin");
 
 // require("dotenv").config();
