@@ -12,7 +12,7 @@ let formdata={
     password:form.password.value,
     // role:form.role.value
 }
-console.log(formdata)
+
 fetch("https://chatpointbackend2-production.up.railway.app/user/register",{
     method:"POST",
    headers:{
@@ -20,7 +20,7 @@ fetch("https://chatpointbackend2-production.up.railway.app/user/register",{
    },
    body:
     JSON.stringify(formdata)
-}).then((res)=>res.json()).then((res)=>{alert(res),window.location.href="./login.html"})
+}).then((res)=>res.json()).then((res)=>{alert(res.msg),window.location.href="./login.html"})
 .catch((err)=>alert(err))
  
 

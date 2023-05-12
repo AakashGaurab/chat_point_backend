@@ -7,7 +7,6 @@ async function get_all_user(){
       // Handle the data
       return data;
     });
-    //console.log(data);
     res_data = data;
     display(data);
 }

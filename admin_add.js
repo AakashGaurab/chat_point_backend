@@ -28,6 +28,7 @@ async function post_user(obj){
     let data = await res.json();
 
     if(data == "Admin Added Succesfully"){
+        alert("User Added");
         window.location.href = "admin.html";
     }
     else {
