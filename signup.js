@@ -20,8 +20,8 @@ fetch("https://chatpointbackend2-production.up.railway.app/user/register",{
    },
    body:
     JSON.stringify(formdata)
-}).then((res)=>res.json()).then((res)=>{console.log(res),window.location.href="./login.html"})
-.catch((err)=>console.log(err))
+}).then((res)=>res.json()).then((res)=>{alert(res),window.location.href="./login.html"})
+.catch((err)=>alert(err))
  
 
 })
