@@ -39,7 +39,12 @@ function outputMessage(message) {
     const div = document.createElement('div')
     div.classList.add('message')
     div.setAttribute('class', "textColor")
-
+    if(username!=message.username){
+        div.style.textAlign="left";
+    }
+    else {
+        div.style.textAlign="right";
+    }
     const p = document.createElement('p')
     p.classList.add('meta')
     p.innerText = message.username
