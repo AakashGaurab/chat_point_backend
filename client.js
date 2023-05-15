@@ -80,7 +80,7 @@ getdata();
 async function getdata(){
     console.log(room);
     try {
-        let response = await fetch("http://localhost:4500/data/",{
+        let response = await fetch("https://chat-app-7pse.onrender.com/data/",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
