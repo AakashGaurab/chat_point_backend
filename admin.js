@@ -108,6 +108,11 @@ else {
 /* ****************Role Update ****************************** */
 
 async function add_admin(element){
+  let role = sessionStorage.getItem("role");
+  if(role!="Admin"){
+    alert("You are not authorised")
+    return;
+  }
   let obj = {};
   obj.email = element.email;
   let response = await fetch("https://chatpointbackend2-production.up.railway.app/admin/update",{
