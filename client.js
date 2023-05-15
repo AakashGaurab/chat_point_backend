@@ -25,6 +25,7 @@ socket.on('roomUsers', ({ room, users }) => {
 chatForm.addEventListener('submit', (e) => {
     e.preventDefault()
     let msg = e.target.elements.msg.value
+    console.log(msg);
     msg = msg.trim()
     if (!msg) {
         return false
@@ -72,3 +73,32 @@ document.getElementById('leave-btn').addEventListener('click', (e) => {
         window.location.href = './index.html'
     }
 })
+
+
+getdata();
+
+async function getdata(){
+    console.log(room);
+    try {
+        let response = await fetch("http://localhost:4500/data/",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({"rooms":room})
+        });
+
+        let data = await response.json();
+        console.log(data);
+        display(data);
+    } catch (error) {
+        alert(error);
+    }
+}
+
+
+function display(data){
+    for(let i=0;i<data.length;i++){
+        outputMessage(data[i]);
+    }
+}
