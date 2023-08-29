@@ -8,7 +8,7 @@ const username = urlParams.get("username")
 const room = urlParams.get("room")
 console.log(username, room);
 
-const socket = io("https://chat-app-7pse.onrender.com/", { transports: ["websocket"] });
+const socket = io("https://chat-backend-a17w.onrender.com/", { transports: ["websocket"] });
 
 socket.emit('joinRoom', { username, room })
 
