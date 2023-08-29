@@ -10,7 +10,7 @@ button.addEventListener("click",(event)=>{
         password:form.password.value,
     }
 
-    fetch("https://chatpointbackend2-production.up.railway.app/user/login",{
+    fetch("https://user-backendchat-point.onrender.com/user/login",{
         method:"POST",
        headers:{
         'Content-type':'Application/json'
