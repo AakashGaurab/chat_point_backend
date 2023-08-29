@@ -13,7 +13,7 @@ let formdata={
     // role:form.role.value
 }
 
-fetch("https://chatpointbackend2-production.up.railway.app/user/register",{
+fetch("https://user-backendchat-point.onrender.com/user/register",{
     method:"POST",
    headers:{
     'Content-type':'Application/json'
@@ -32,7 +32,7 @@ fetch("https://chatpointbackend2-production.up.railway.app/user/register",{
 
 
 document.querySelector("#login-with-google").addEventListener("click",async()=>{
-    let data = await fetch("https://chatpointbackend2-production.up.railway.app/auth/google")
+    let data = await fetch("https://user-backendchat-point.onrender.com//auth/google")
 })
 
 
@@ -48,7 +48,7 @@ document.querySelector("#admin-login-button").addEventListener("click",async(eve
         // role:form.role.value 
     }
     
-    let res = await fetch("https://chatpointbackend2-production.up.railway.app/admin/read");
+    let res = await fetch("https://user-backendchat-point.onrender.com//admin/read");
     let data = await res.json();
     console.log(data);
     let flag = false;
