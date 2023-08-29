@@ -16,7 +16,7 @@ async function post_user(obj){
         alert("You are not authorised");
         return;
     }
-    let res = await fetch("https://chatpointbackend2-production.up.railway.app/admin/create",{
+    let res = await fetch("https://user-backendchat-point.onrender.com/admin/create",{
         method:"POST",
        headers:{
         'Content-type':'Application/json'
